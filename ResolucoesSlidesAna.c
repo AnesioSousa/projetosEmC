@@ -2,6 +2,7 @@
 
 int main(){
 
+    return 0;
 }
 
 /* Exercícios slides 3
@@ -58,5 +59,85 @@ Questão 5:
 
     return 0;
 
+RESOLUÇÕES SLIDES 4 - ESTRUTURAS CONDICIONAIS
+
+*****QUESTÃO 1******************************************************************
+    int idade;
+    float peso;
+
+    printf("Digite sua idade:\n");
+    scanf("%d", &idade);
+
+    if(idade <18 || idade>65){
+            printf("Sua idade nao permite a doacao de sangue!\n");
+    }else{
+        printf("Digite seu peso:\n");
+        scanf("%f", &peso);
+
+        if(peso>=50)
+            printf("Voce pode doar sangue!\n");
+        else
+            printf("Seu peso atual nao permite a doacao de sangue!\n");
+
+    }
+***************************QUESTÃO 2********************************************
+    int idade, idiomasF;
+    float altura;
+
+    printf("Ola! Digite a sua idade:\n");
+    scanf("%d", &idade);
+
+    if(idade < 24){
+        printf("Voce nao possui idade adequada a funcao");
+    } else{
+        printf("Qual a sua altura? (em metros)\n");
+        scanf("%f", &altura);
+
+        if(altura < 1.70){
+            printf("Voce eh muito baixinha!");
+
+        } else {
+                printf("Quantos idiomas voce eh fluente?\n");
+                scanf("%d", &idiomasF);
+
+                if(idiomasF < 2)
+                    printf("Voce nao possui formacao linguistica suficiente");
+                else
+                    printf("Parabens! Voce esta apta a concorrer para a vaga!\n");
+        }
+    }
+
+*************************04/07/22 QUESTÃO 3 ****************************
+    float salario, prestacao;
+
+    scanf("%f %f", &salario, &prestacao);
+
+    if(prestacao > (salario*0.3))
+        printf("Nao sera possivel realizar o emprestimo");
+    else
+        printf("Eh possivel realizar o emprestimo");
+
+
+******************************QUESTÃO 4*********************************
+
+float dias,pesoCachorro, pesoRacao;
+
+    printf("Digite o peso do cachorro em kg, tecle enter, depois insira o peso da racao tambem em kg:\n");
+    scanf("%f %f", &pesoCachorro, &pesoRacao);
+
+    pesoRacao*= 1000;
+
+    if(pesoCachorro<=5){
+        dias = pesoRacao/60;
+    }else if(pesoCachorro >5 && pesoCachorro<=10){
+        dias = pesoRacao/95;
+    }else if(pesoCachorro > 10 && pesoCachorro <=15){
+        dias = pesoRacao/135;
+    }else if(pesoCachorro >16 && pesoCachorro<=20 ){
+        dias = pesoRacao/170;
+    }else
+        dias = pesoRacao/215;
+
+    printf("A racao vai durar %.f dias", dias);
 
 */
